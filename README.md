@@ -29,35 +29,36 @@ _There is no extra servers or databases that need to be ran. The files in this c
 ## Tests
 Describe:PizzaOrder
 
-TEST:Should return the size choses for pizza. 
+TEST: 
+  Should return the size choses for pizza. 
 CODE:
-class Pizza {
-  constructor() {
-    this.size = [];
-  }
-};
-
-function pizzaSizeChoice(sizeChoice) {
-  const db = db_sizes;
-  for (let i = 0; i < db.length; i++) {
-    let currentSize = db[i];
-    if (currentSize.size === sizeChoice) {
-      const smallPizza = new Pizza()
-      smallPizza.size = sizeChoice
+  class Pizza {
+    constructor() {
+      this.size = [];
+    }
+  };
+  function pizzaSizeChoice(sizeChoice) {
+    const db = db_sizes;
+    for (let i = 0; i < db.length; i++) {
+      let currentSize = db[i];
+      if (currentSize.size === sizeChoice) {
+        const smallPizza = new Pizza()
+        smallPizza.size = sizeChoice
+      }
     }
   }
-}
-  const db_sizes = [
-    {
-    size: "small",
-    cost: 1.00
-    },
-  ];
-OUTPUT: Pizza[size{"small"}]
+    const db_sizes = [
+      {
+      size: "small",
+      cost: 1.00
+      },
+    ];
+OUTPUT: 
+  Pizza[size{"small"}]
 
 ## Known Bugs
 
-* _No known bugs._
+* _can't get any outputs wanted_
 
 ## License
 
